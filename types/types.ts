@@ -7,3 +7,19 @@ export type CategoryProps = {
 	createdAt: string;
 	updatedAt: string;
 };
+
+type ImageProp = {};
+
+export type ProductProps = {
+	id: string;
+	title: string;
+	slug: string;
+	description: string;
+	rating: string[];
+	price: number;
+	quantity: number;
+	images: string[];
+	createdAt: string;
+	updatedAt: string;
+	categoryId: string;
+};
