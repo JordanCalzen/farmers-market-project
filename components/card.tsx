@@ -1,22 +1,24 @@
+import { ProductProps } from "@/types/types";
 import Image from "next/image";
 import React from "react";
 
-export default function Card() {
+export default function Card({ prod }: { prod: ProductProps }) {
 	return (
-		<div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
+		<div className="w-[9rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
 			<a href="#">
-				<Image
-					className="p-8 rounded-t-lg"
-					src="/4832157.png"
-					alt="product image"
-					width={300}
-					height={300}
-				/>
+				<div className=" relative w-[9rem] h-[8rem]">
+					<Image
+						className="rounded-t-lg w-full h-full object-cover"
+						src={prod.images[1]}
+						alt={prod.title}
+						fill
+					/>
+				</div>
 			</a>
 			<div className="px-2 pb-5">
 				<a href="#">
 					<h5 className=" font-semibold tracking-tight text-black">
-						Apple Watch Series 7 GPS
+						{prod.title}
 					</h5>
 				</a>
 				<div className="flex items-center mt-2.5 mb-5">
@@ -68,11 +70,11 @@ export default function Card() {
 						</svg>
 					</div>
 					<span className="bg-blue-100 text-black text-xs font-semibold px-2.5 py-0.5 rounded ">
-						5.0
+						{prod.rating}
 					</span>
 				</div>
 				<div className="flex items-center justify-between">
-					<span className=" font-bold text-black">$599</span>
+					<span className=" font-bold text-black">${prod.price}</span>
 					<a
 						href="#"
 						className="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-600 font-medium rounded-lg text-sm px-3 py-2 text-center "
