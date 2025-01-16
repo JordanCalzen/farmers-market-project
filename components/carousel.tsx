@@ -84,7 +84,7 @@ export default function Carousel() {
 					{slides[currentIndex].description}
 				</p>
 				<Link
-					href="/"
+					href="/Home"
 					className="mt-4 inline-block px-4 py-2 text-sm font-medium text-white bg-green-600 rounded hover:bg-green-700"
 				>
 					{slides[currentIndex].buttonText}
@@ -108,7 +108,7 @@ export default function Carousel() {
 			{/* Previous Button */}
 			<button
 				type="button"
-				className="absolute top-[-20%] left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer"
+				className="absolute top-[-25%] left-[-5%] z-30 flex items-center justify-center h-full px-4 cursor-pointer"
 				onClick={handlePrev}
 			>
 				<span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30">
@@ -134,7 +134,7 @@ export default function Carousel() {
 			{/* Next Button */}
 			<button
 				type="button"
-				className="absolute top-[-20%]  right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer"
+				className="absolute top-[-25%]  right-[-5%] z-30 flex items-center justify-center h-full px-4 cursor-pointer"
 				onClick={handleNext}
 			>
 				<span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30">
