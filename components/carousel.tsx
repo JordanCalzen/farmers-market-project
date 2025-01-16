@@ -76,7 +76,7 @@ export default function Carousel() {
 			</div>
 
 			{/* Text and Button Section */}
-			<div className="absolute text-black bottom-40 left-1/2 transform -translate-x-1/2 text-center">
+			<div className="absolute text-black bottom-60 left-1/2 transform -translate-x-1/2 text-center">
 				<h2 className="text-2xl  font-bold md:text-4xl">
 					{slides[currentIndex].title}
 				</h2>
