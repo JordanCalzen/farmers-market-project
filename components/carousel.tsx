@@ -71,7 +71,6 @@ export default function Carousel() {
 						alt={slide.title}
 					/>
 				))}
-				{/* Overlay */}
 				<div className="absolute inset-0 bg-black/30"></div>
 			</div>
 

@@ -7,7 +7,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { IoSearch } from "react-icons/io5";
 import Products from "@/components/products";
 import Category from "@/components/category";
-export default function Home() {
+export default async function Home() {
 	return (
 		<div>
 			<nav className="w-full shadow py-2 px-2 flex items-center justify-between">
