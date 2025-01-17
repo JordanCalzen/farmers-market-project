@@ -48,11 +48,11 @@ export default async function page({
 					</span>
 				</div>
 				{product ? (
-					<div className=" max-w-sm bg-white  ">
+					<div className="  bg-white  ">
 						<a href="#">
-							<div className=" h-[10rem] shadow-custom-dark">
+							<div className=" h-[10rem] w-[300px]shadow-custom-dark rounded-lg flex items-center justify-center">
 								<Image
-									className="rounded-t-lg w-full h-full object-cover"
+									className="rounded-lg  h-full object-cover"
 									src={product.images[1]}
 									alt={product.title}
 									width={300}
@@ -60,75 +60,104 @@ export default async function page({
 								/>
 							</div>
 						</a>
-						<div className="px-2 pb-5">
-							<a href="#">
-								<h5 className=" font-semibold tracking-tight text-black">
-									{product.title}
-								</h5>
-							</a>
-							<div className="flex items-center mt-2.5 mb-5">
-								<div className="flex items-center space-x-1 rtl:space-x-reverse">
-									<svg
-										className="w-4 h-4 text-yellow-300"
-										aria-hidden="true"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="currentColor"
-										viewBox="0 0 22 20"
-									>
-										<path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-									</svg>
-									<svg
-										className="w-4 h-4 text-yellow-300"
-										aria-hidden="true"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="currentColor"
-										viewBox="0 0 22 20"
-									>
-										<path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-									</svg>
-									<svg
-										className="w-4 h-4 text-yellow-300"
-										aria-hidden="true"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="currentColor"
-										viewBox="0 0 22 20"
-									>
-										<path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-									</svg>
-									<svg
-										className="w-4 h-4 text-yellow-300"
-										aria-hidden="true"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="currentColor"
-										viewBox="0 0 22 20"
-									>
-										<path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-									</svg>
-									<svg
-										className="w-4 h-4 text-gray-200 dark:text-gray-600"
-										aria-hidden="true"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="currentColor"
-										viewBox="0 0 22 20"
-									>
-										<path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-									</svg>
+						<div className="flex items-center justify-between">
+							<div className="p-4 w-[160] mx-auto bg-white">
+								<div className="flex items-center space-x-2">
+									<h2 className="text-blue-600 font-bold">Rajesh Farms</h2>
+									<span className="text-green-700 text-sm">&#10003;</span>
 								</div>
-								<span className="bg-blue-100 text-black text-xs font-semibold px-2.5 py-0.5 rounded ">
-									4.8
-								</span>
+								<h3 className="mt-2 text-lg font-semibold text-gray-800">
+									{product.title}
+								</h3>
+								<div className="mt-1 text-gray-500 text-sm">
+									<span className="line-through">₹200/Kg</span>
+									<span className="ml-2 text-green-700 font-medium">-25%</span>
+								</div>
+								<div className="mt-2 text-2xl font-bold text-gray-900">
+									₹150/Kg
+								</div>
+								<div className="mt-1 text-green-700 font-semibold">Instock</div>
+								<div className="text-gray-500 text-sm">
+									{product.quantity} Kg Left
+								</div>
+								<div className="mt-2 text-gray-600 text-sm">
+									<p>Delivery: {product.updatedAt}</p>
+									<p>Seller Name: Rajesh, Tiruvallur</p>
+								</div>
 							</div>
-							<div className="flex items-center justify-between">
-								<span className=" font-bold text-black">${product.price}</span>
-							</div>
-							<p>{product.description}</p>
-							<div className="flex items-center justify-center pt-2">
-								<a
-									href="#"
-									className="text-white bg-green-800 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-green-600 font-medium rounded-lg text-sm px-3 py-2 text-center "
-								>
-									Add to cart
-								</a>
+							<div className="px-4 w-[160] mx-auto bg-white">
+								<div className="flex items-center py-3">
+									<div className="flex items-center space-x-1 rtl:space-x-reverse">
+										<svg
+											className="w-4 h-4 text-yellow-300"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											fill="currentColor"
+											viewBox="0 0 22 20"
+										>
+											<path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+										</svg>
+										<svg
+											className="w-4 h-4 text-yellow-300"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											fill="currentColor"
+											viewBox="0 0 22 20"
+										>
+											<path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+										</svg>
+										<svg
+											className="w-4 h-4 text-yellow-300"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											fill="currentColor"
+											viewBox="0 0 22 20"
+										>
+											<path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+										</svg>
+										<svg
+											className="w-4 h-4 text-yellow-300"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											fill="currentColor"
+											viewBox="0 0 22 20"
+										>
+											<path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+										</svg>
+										<svg
+											className="w-4 h-4 text-gray-200 dark:text-gray-600"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											fill="currentColor"
+											viewBox="0 0 22 20"
+										>
+											<path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+										</svg>
+									</div>
+									<span className="bg-blue-100  text-black text-xs font-semibold px-2.5 py-0.5 rounded ">
+										4.8
+									</span>
+								</div>
+								<div className="flex items-center justify-end">
+									<a
+										href="#"
+										className="text-white bg-green-800 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-green-600 font-medium rounded-lg text-sm px-3 py-2 text-end "
+									>
+										Add to cart
+									</a>
+								</div>
+								<h3 className="flex items-center  py-2 justify-between gap-2">
+									<p className="text-gray-600">bulk</p>
+									<span className="text-gray-600 bg-white rounded-lg p-1 shadow-custom-dark">
+										{product.quantity}{" "}
+										<span className="text-black font-bold">kg</span>
+									</span>
+								</h3>
+
+								<div className="mt-2 text-gray-600 text-sm">
+									<p className="my-2 ">{product.description}</p>
+									<p>{product.description}</p>
+								</div>
 							</div>
 						</div>
 					</div>
