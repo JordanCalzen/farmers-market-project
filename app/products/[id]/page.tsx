@@ -50,7 +50,7 @@ export default async function page({
 				{product ? (
 					<div className="  bg-white  ">
 						<a href="#">
-							<div className=" h-[10rem] w-[300px]shadow-custom-dark rounded-lg flex items-center justify-center">
+							<div className=" h-[15rem] w-full shadow-custom-dark rounded-lg flex items-center justify-center">
 								<Image
 									className="rounded-lg  h-full object-cover"
 									src={product.images[1]}
