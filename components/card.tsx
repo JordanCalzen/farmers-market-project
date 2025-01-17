@@ -1,16 +1,17 @@
 import { ProductProps } from "@/types/types";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-export default function Card({ prod }: { prod: ProductProps }) {
+export default function Card({ product }: { product: ProductProps }) {
 	return (
 		<div className=" max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
 			<a href="#">
 				<div className=" h-[8rem]">
 					<Image
 						className="rounded-t-lg w-full h-full object-cover"
-						src={prod.images[1]}
-						alt={prod.title}
+						src={product.images[1]}
+						alt={product.title}
 						width={300}
 						height={300}
 					/>
@@ -19,7 +20,7 @@ export default function Card({ prod }: { prod: ProductProps }) {
 			<div className="px-2 pb-5">
 				<a href="#">
 					<h5 className=" font-semibold tracking-tight text-black">
-						{prod.title}
+						{product.title}
 					</h5>
 				</a>
 				<div className="flex items-center mt-2.5 mb-5">
@@ -75,7 +76,15 @@ export default function Card({ prod }: { prod: ProductProps }) {
 					</span>
 				</div>
 				<div className="flex items-center justify-between">
-					<span className=" font-bold text-black">${prod.price}</span>
+					<span className=" font-bold text-black">${product.price}</span>
+					<Link
+						href={`/products/${product.id}`}
+						className="text-blue-700 text-sm underline text-center"
+					>
+						View Details
+					</Link>
+				</div>
+				<div className="flex items-center justify-center pt-2">
 					<a
 						href="#"
 						className="text-white bg-green-800 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-green-600 font-medium rounded-lg text-sm px-3 py-2 text-center "

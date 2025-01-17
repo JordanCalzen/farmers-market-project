@@ -8,8 +8,6 @@ export type CategoryProps = {
 	updatedAt: string;
 };
 
-type ImageProp = {};
-
 export type ProductProps = {
 	id: string;
 	title: string;

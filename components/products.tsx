@@ -13,7 +13,7 @@ export default async function Products() {
 			</div>
 			<div className="grid grid-cols-2 gap-2 p-2">
 				{productsArray.map((product) => {
-					return <Card key={product.id} prod={product} />;
+					return <Card key={product.id} product={product} />;
 				})}
 			</div>
 		</div>
