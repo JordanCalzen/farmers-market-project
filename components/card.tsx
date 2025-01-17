@@ -84,7 +84,7 @@ export default function Card({ product }: { product: ProductProps }) {
 						View Details
 					</Link>
 				</div>
-				<div className="flex items-center justify-center pt-2">
+				<div className="flex items-center justify-start pt-2">
 					<a
 						href="#"
 						className="text-white bg-green-800 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-green-600 font-medium rounded-lg text-sm px-3 py-2 text-center "
