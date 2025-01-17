@@ -24,7 +24,7 @@ export default async function page({
 				<div className="text-black flex items-center justify-center gap-2">
 					<Link
 						href="#"
-						className="py-2 px-3 text-white rounded-md bg-green-500"
+						className="py-2 px-3 text-white rounded-md text-sm bg-green-800"
 					>
 						Sell Now
 					</Link>
@@ -50,9 +50,9 @@ export default async function page({
 				{product ? (
 					<div className="  bg-white  ">
 						<a href="#">
-							<div className=" h-[15rem] w-full shadow-custom-dark rounded-lg flex items-center justify-center">
+							<div className=" h-[20rem] w-full shadow-custom-dark rounded-lg flex items-center justify-center">
 								<Image
-									className="rounded-lg  h-full object-cover"
+									className="rounded-lg w-full h-full object-cover"
 									src={product.images[1]}
 									alt={product.title}
 									width={300}
