@@ -4,14 +4,15 @@ import React from "react";
 
 export default function Card({ prod }: { prod: ProductProps }) {
 	return (
-		<div className="w-[9rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
+		<div className=" max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
 			<a href="#">
-				<div className=" relative w-[9rem] h-[8rem]">
+				<div className=" h-[8rem]">
 					<Image
 						className="rounded-t-lg w-full h-full object-cover"
 						src={prod.images[1]}
 						alt={prod.title}
-						fill
+						width={300}
+						height={300}
 					/>
 				</div>
 			</a>
@@ -70,14 +71,14 @@ export default function Card({ prod }: { prod: ProductProps }) {
 						</svg>
 					</div>
 					<span className="bg-blue-100 text-black text-xs font-semibold px-2.5 py-0.5 rounded ">
-						{prod.rating}
+						4.8
 					</span>
 				</div>
 				<div className="flex items-center justify-between">
 					<span className=" font-bold text-black">${prod.price}</span>
 					<a
 						href="#"
-						className="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-600 font-medium rounded-lg text-sm px-3 py-2 text-center "
+						className="text-white bg-green-800 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-green-600 font-medium rounded-lg text-sm px-3 py-2 text-center "
 					>
 						Add to cart
 					</a>

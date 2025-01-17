@@ -12,13 +12,13 @@ export default async function Home() {
 		<div>
 			<nav className="w-full shadow py-2 px-2 flex items-center justify-between">
 				<div className="flex items-center justify-between gap-2">
-					<a href="#">
+					<a href="#" className="">
 						<Image
-							className="w-10 h-10 rounded-full"
-							src="/4832157.png"
-							alt="Jese Leos/"
-							width={20}
-							height={20}
+							className="w-10 h-10 rounded-full object-cover"
+							src="/websitepic.jpg"
+							alt="jordan"
+							width={300}
+							height={300}
 						/>
 					</a>
 					<div className="text-black">
