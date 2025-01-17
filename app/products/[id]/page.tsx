@@ -73,9 +73,7 @@ export default async function page({
 									<span className="line-through">₹200/Kg</span>
 									<span className="ml-2 text-green-700 font-medium">-25%</span>
 								</div>
-								<div className="mt-2 text-2xl font-bold text-gray-900">
-									₹150/Kg
-								</div>
+
 								<div className="mt-1 text-green-700 font-semibold">Instock</div>
 								<div className="text-gray-500 text-sm">
 									{product.quantity} Kg Left
