@@ -1,11 +1,11 @@
 import productApi from "@/Actions/productApi";
 import AddToCart from "@/components/addToCcart";
+import Navbar2 from "@/components/cart2";
 import Image from "next/image";
-import Link from "next/link";
+
 import React from "react";
-import { FaChevronLeft } from "react-icons/fa";
-import { IoMdHeartEmpty } from "react-icons/io";
-import { IoCartOutline, IoSearch } from "react-icons/io5";
+
+import { IoSearch } from "react-icons/io5";
 
 export default async function page({
 	params,
@@ -19,25 +19,7 @@ export default async function page({
 
 	return (
 		<div className="text-black">
-			<nav className="w-full py-1 shadow-custom-dark px-2 flex items-center justify-between">
-				<Link href="/Home" className="p-2 rounded-full shadow-sm text-black/50">
-					<FaChevronLeft />
-				</Link>
-				<div className="text-black flex items-center justify-center gap-2">
-					<Link
-						href="#"
-						className="py-2 px-3 text-white rounded-md text-sm bg-green-800"
-					>
-						Sell Now
-					</Link>
-					<Link href="#" className="p-2 rounded-full shadow-sm">
-						<IoMdHeartEmpty />
-					</Link>
-					<Link href="#" className="p-2 rounded-full shadow-sm">
-						<IoCartOutline />
-					</Link>
-				</div>
-			</nav>
+			<Navbar2 />
 			<div className="text-black p-2">
 				<div className="relative mb-2 bg-white shadow-custom-dark rounded-full flex  items-center">
 					<input

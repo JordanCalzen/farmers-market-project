@@ -1,33 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { IoCartOutline } from "react-icons/io5";
-import { FaChevronLeft } from "react-icons/fa";
-import { IoMdHeartEmpty } from "react-icons/io";
+
 import { IoSearch } from "react-icons/io5";
+import Navbar2 from "@/components/cart2";
 
 export default function page() {
 	return (
 		<div>
-			<nav className="w-full shadow py-1 px-2 flex items-center justify-between">
-				<Link href="/Home" className="p-2 rounded-full shadow-sm text-black/50">
-					<FaChevronLeft />
-				</Link>
-				<div className="text-black flex items-center justify-center gap-2">
-					<Link
-						href="#"
-						className="py-2 px-3 text-white rounded-md bg-green-500"
-					>
-						Sell Now
-					</Link>
-					<Link href="#" className="p-2 rounded-full shadow-sm">
-						<IoMdHeartEmpty />
-					</Link>
-					<Link href="#" className="p-2 rounded-full shadow-sm">
-						<IoCartOutline />
-					</Link>
-				</div>
-			</nav>
+			<Navbar2 />
 			<div className="relative p-2 flex  items-center">
 				<input
 					type="text"

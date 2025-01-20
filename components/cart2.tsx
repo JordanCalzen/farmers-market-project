@@ -25,7 +25,7 @@ export default function Navbar2() {
 					<Link href="#" className="p-2 rounded-full shadow-sm">
 						<IoMdHeartEmpty />
 					</Link>
-					<Link href="#" className="p-2  relative rounded-full shadow-sm">
+					<Link href="/cart" className="p-2  relative rounded-full shadow-sm">
 						<IoCartOutline />
 						<span className="absolute w-[15px] text-center flex items-center justify-center h-[15px] bg-green-800 rounded-full text-white top-0 left-[15px] p-2 text-sm">
 							{totalItems}
