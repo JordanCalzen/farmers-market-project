@@ -1,9 +1,13 @@
+"use client";
+
+import { useCartStore } from "@/store/store";
 import { ProductProps } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function Card({ product }: { product: ProductProps }) {
+	const { handleAddToCart } = useCartStore((state) => state);
 	return (
 		<div className=" max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
 			<a href="#">
@@ -85,12 +89,12 @@ export default function Card({ product }: { product: ProductProps }) {
 					</Link>
 				</div>
 				<div className="flex items-center justify-start pt-2">
-					<a
-						href="#"
-						className="text-white bg-green-800 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-green-600 font-medium rounded-lg text-sm px-3 py-2 text-center "
+					<button
+						className="text-white bg-green-800 hover:bg-green-900 font-medium rounded-lg text-sm px-3 py-2 text-center "
+						onClick={() => handleAddToCart(product)}
 					>
 						Add to cart
-					</a>
+					</button>
 				</div>
 			</div>
 		</div>
