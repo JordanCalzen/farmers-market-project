@@ -6,10 +6,17 @@ import { useCartStore } from "@/store/store";
 
 export default function Cart3() {
 	const { items, handleRemove, updateQty } = useCartStore((state) => state);
+	const totalExpression = items
+		.map((item) => `(${item.price} * ${item.quantity})`)
+		.join("+");
+	const total = eval(totalExpression);
 	return (
 		<div>
 			<div className="p-2">
-				<h2 className="text-lg py-2 font-semibold">Shopping Cart</h2>
+				<div className="flex items-center justify-between">
+					<h2 className="text-lg py-2 font-semibold">Shopping Cart</h2>
+					<h2 className="text-lg py-2 font-semibold">Total:${total ?? 0}</h2>
+				</div>
 				<div className="bg-[#F2F2F2] p-1 flex items-center justify-between">
 					<p>Item Details</p>
 					<p>Quantity</p>
@@ -17,6 +24,7 @@ export default function Cart3() {
 				</div>
 
 				{items.map((item) => {
+					const newPrice = item.quantity * item.price;
 					return (
 						<div key={item.id} className="p-1 shadow-custom-dark mb-2">
 							<div className="flex items-center justify-between">
@@ -29,7 +37,7 @@ export default function Cart3() {
 										height={300}
 									/>
 									<h3>{item.title}</h3>
-									<p>{item.price}</p>
+									<p>${newPrice}</p>
 								</div>
 								<div className="flex items-center justify-center gap-2">
 									<button
