@@ -18,7 +18,7 @@ export default function Navbar2() {
 				<div className="text-black flex items-center justify-center gap-2">
 					<Link
 						href="#"
-						className="py-2 px-3 text-white rounded-md bg-green-500"
+						className="py-2 px-3 text-white rounded-md bg-green-800"
 					>
 						Sell Now
 					</Link>

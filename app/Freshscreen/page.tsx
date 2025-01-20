@@ -23,7 +23,7 @@ export default function page() {
 				<ul className="flex gap-2 flex-nowrap -mb-px overflow-x-auto scrollbar-hide">
 					<Link
 						href="#"
-						className="inline-block px-3 py-1 border bg-green-500 text-white rounded-lg"
+						className="inline-block px-3 py-1 border bg-green-800 text-white rounded-lg"
 					>
 						All
 					</Link>

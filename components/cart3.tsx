@@ -64,34 +64,6 @@ export default function Cart3() {
 						</div>
 					);
 				})}
-
-				{/* <div className="p-1 shadow-custom-dark mb-2">
-					<div className="flex items-center justify-between">
-						<div className="text-center">
-							<Image
-								className="w-[80px] h-[80px] object-cover block"
-								src="/4832157.png"
-								alt=""
-								width={300}
-								height={300}
-							/>
-							<h3>Title</h3>
-							<p>Price</p>
-						</div>
-						<div className="flex items-center justify-center gap-2">
-							<button className="border-none shadow-custom-dark p-1 w-[20px] h-[20px] flex items-center justify-center text-sm font-bold">
-								-
-							</button>
-							<p>1</p>
-							<button className="border-none shadow-custom-dark p-1 w-[20px] h-[20px] flex items-center justify-center text-sm font-bold">
-								+
-							</button>
-						</div>
-						<button className="border-none bg-red-600 shadow-custom-dark py-1 px-3 rounded-lg flex items-center justify-center text-sm font-bold">
-							<RiDeleteBin6Line className="text-[20px] text-white" />
-						</button>
-					</div>
-				</div> */}
 			</div>
 		</div>
 	);
