@@ -1,4 +1,5 @@
 import productApi from "@/Actions/productApi";
+import AddToCart from "@/components/addToCcart";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -15,6 +16,7 @@ export default async function page({
 
 	const productsArray = (await productApi()) || [];
 	const product = productsArray.find((product) => product.id == id);
+
 	return (
 		<div className="text-black">
 			<nav className="w-full py-1 shadow-custom-dark px-2 flex items-center justify-between">
@@ -136,14 +138,7 @@ export default async function page({
 										4.8
 									</span>
 								</div>
-								<div className="flex items-center justify-end">
-									<a
-										href="#"
-										className="text-white bg-green-800 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-green-600 font-medium rounded-lg text-sm px-3 py-2 text-end "
-									>
-										Add to cart
-									</a>
-								</div>
+								<AddToCart product={product} />
 								<h3 className="flex items-center  py-2 justify-between gap-2">
 									<p className="text-gray-600">bulk</p>
 									<span className="text-gray-600 bg-white rounded-lg p-1 shadow-custom-dark">
