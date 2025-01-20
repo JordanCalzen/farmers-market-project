@@ -5,7 +5,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { useCartStore } from "@/store/store";
 
 export default function Cart3() {
-	const { items, handleRemove } = useCartStore((state) => state);
+	const { items, handleRemove, updateQty } = useCartStore((state) => state);
 	return (
 		<div>
 			<div className="p-2">
@@ -32,11 +32,17 @@ export default function Cart3() {
 									<p>{item.price}</p>
 								</div>
 								<div className="flex items-center justify-center gap-2">
-									<button className="border-none shadow-custom-dark p-1 w-[20px] h-[20px] flex items-center justify-center text-sm font-bold">
+									<button
+										onClick={() => updateQty("decrement", item.id)}
+										className="border-none shadow-custom-dark p-1 w-[20px] h-[20px] flex items-center justify-center text-sm font-bold"
+									>
 										-
 									</button>
-									<p>1</p>
-									<button className="border-none shadow-custom-dark p-1 w-[20px] h-[20px] flex items-center justify-center text-sm font-bold">
+									<p>{item.quantity}</p>
+									<button
+										onClick={() => updateQty("increment", item.id)}
+										className="border-none shadow-custom-dark p-1 w-[20px] h-[20px] flex items-center justify-center text-sm font-bold"
+									>
 										+
 									</button>
 								</div>

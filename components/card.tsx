@@ -5,9 +5,13 @@ import { ProductProps } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 export default function Card({ product }: { product: ProductProps }) {
-	const { handleAddToCart } = useCartStore((state) => state);
+	const { handleAddToCart, items, handleRemove } = useCartStore(
+		(state) => state
+	);
+	const newItem = items.find((item) => item.id === product.id);
 	return (
 		<div className=" max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
 			<a href="#">
@@ -89,12 +93,22 @@ export default function Card({ product }: { product: ProductProps }) {
 					</Link>
 				</div>
 				<div className="flex items-center justify-start pt-2">
-					<button
-						className="text-white bg-green-800 hover:bg-green-900 font-medium rounded-lg text-sm px-3 py-2 text-center "
-						onClick={() => handleAddToCart(product)}
-					>
-						Add to cart
-					</button>
+					{newItem ? (
+						<button
+							className="text-red-600 bg-transparent font-medium rounded-lg border-solid border-[2px] flex items-center gap-2 border-red-600 text-sm px-3 py-1 text-center "
+							onClick={() => handleRemove(newItem.id)}
+						>
+							<RiDeleteBin6Line className="text-sm" />
+							Remove
+						</button>
+					) : (
+						<button
+							className="text-white bg-green-800 hover:bg-green-900 font-medium rounded-lg text-sm px-3 py-2 text-center "
+							onClick={() => handleAddToCart(product)}
+						>
+							Add to cart
+						</button>
+					)}
 				</div>
 			</div>
 		</div>

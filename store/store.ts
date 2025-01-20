@@ -19,10 +19,10 @@ interface CardItems {
 }
 
 type cartStore = {
-	// count: number;
 	items: CardItems[];
 	handleAddToCart: (product: ProductProps) => void;
 	handleRemove: (id: string) => void;
+	updateQty: (type: "increment" | "decrement", id: string) => void;
 };
 
 export const useCartStore = create<cartStore>()(
@@ -47,7 +47,7 @@ export const useCartStore = create<cartStore>()(
 								description: product.description,
 								rating: product.rating[0],
 								price: product.price,
-								quantity: product.quantity,
+								quantity: 1,
 							},
 						],
 					});
@@ -59,6 +59,25 @@ export const useCartStore = create<cartStore>()(
 				const filteredItems = items.filter((item) => id !== item.id);
 				set({ items: filteredItems });
 				toast.success("Item removed successfully");
+			},
+			updateQty: (type, id) => {
+				const item = get().items.find((item) => id === item.id);
+
+				if (!item) {
+					return;
+				}
+				// item.quantity =
+				// 	type === "increment" ? item.quantity + 1 : item.quantity - 1;
+
+				if (type === "increment") {
+					item.quantity += 1;
+				} else if (type === "decrement" && item.quantity > 1) {
+					item.quantity -= 1;
+				}
+
+				set({
+					items: [...get().items],
+				});
 			},
 		}),
 		{
